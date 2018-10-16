@@ -33,6 +33,12 @@ Edit the file `script.sh` for the stuff you want to do.
 ## crontab
 Edit in `crontab` the schedule when to execute `script.sh`. 
 
+For debugging check the log file
+
+```
+docker exec -it mytempl9 tail -f /var/log/cron.log
+```
+
 ## network settings
 Requires a bridge network, e.g.
 
@@ -53,6 +59,9 @@ ipaddr4=172.64.0.9  # pick an IP within the subnet of mynet
 ### Dockerfile
 Nothing to say about it.
 
+## Related templates
+* [template5](https://github.com/waalfisk/template5) -- Postgres Database
+* [template9](https://github.com/waalfisk/template9) -- Process with access to Postgres DB
 
 ### Links
 * [template9](https://github.com/waalfisk/template9)
